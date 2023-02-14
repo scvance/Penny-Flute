@@ -2,11 +2,13 @@
 #define song_h
 #include "note.h"
 //these are the durations of a for loop for given notes, assuming 4/4 time
-const int eighth = 12;
-const int quarter = 24;
-const int half = 48;
-const int whole = 96;
-const int sixteenth = 6;
+//multipliers let you change the tempo
+const float multiplier = 0.75;
+const int eighth = 10 * multiplier;
+const int quarter = 20 * multiplier;
+const int half = 40 * multiplier;
+const int whole = 80 * multiplier;
+const int sixteenth = 5 * multiplier;
 
 class Song {
 private:
